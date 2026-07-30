@@ -1,0 +1,166 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'media_path_info.g.dart';
+
+/// MediaPathInfo
+///
+/// Properties:
+/// * [path] 
+/// * [networkPath] 
+/// * [username] 
+/// * [password] 
+@BuiltValue()
+abstract class MediaPathInfo implements Built<MediaPathInfo, MediaPathInfoBuilder> {
+  @BuiltValueField(wireName: r'Path')
+  String? get path;
+
+  @BuiltValueField(wireName: r'NetworkPath')
+  String? get networkPath;
+
+  @BuiltValueField(wireName: r'Username')
+  String? get username;
+
+  @BuiltValueField(wireName: r'Password')
+  String? get password;
+
+  MediaPathInfo._();
+
+  factory MediaPathInfo([void updates(MediaPathInfoBuilder b)]) = _$MediaPathInfo;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(MediaPathInfoBuilder b) => b;
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<MediaPathInfo> get serializer => _$MediaPathInfoSerializer();
+}
+
+class _$MediaPathInfoSerializer implements PrimitiveSerializer<MediaPathInfo> {
+  @override
+  final Iterable<Type> types = const [MediaPathInfo, _$MediaPathInfo];
+
+  @override
+  final String wireName = r'MediaPathInfo';
+
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    MediaPathInfo object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.path != null) {
+      yield r'Path';
+      yield serializers.serialize(
+        object.path,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.networkPath != null) {
+      yield r'NetworkPath';
+      yield serializers.serialize(
+        object.networkPath,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.username != null) {
+      yield r'Username';
+      yield serializers.serialize(
+        object.username,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.password != null) {
+      yield r'Password';
+      yield serializers.serialize(
+        object.password,
+        specifiedType: const FullType(String),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    MediaPathInfo object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required MediaPathInfoBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'Path':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.path = valueDes;
+          break;
+        case r'NetworkPath':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.networkPath = valueDes;
+          break;
+        case r'Username':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.username = valueDes;
+          break;
+        case r'Password':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.password = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  MediaPathInfo deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = MediaPathInfoBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
+}
+

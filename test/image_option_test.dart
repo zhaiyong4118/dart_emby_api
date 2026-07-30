@@ -1,0 +1,26 @@
+import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
+
+// tests for ImageOption
+void main() {
+  final instance = ImageOptionBuilder();
+  // TODO add properties to the builder and call build()
+
+  group(ImageOption, () {
+    // ImageType type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
+    // int limit
+    test('to test the property `limit`', () async {
+      // TODO
+    });
+
+    // int minWidth
+    test('to test the property `minWidth`', () async {
+      // TODO
+    });
+
+  });
+}

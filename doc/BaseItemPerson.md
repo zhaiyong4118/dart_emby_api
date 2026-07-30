@@ -1,0 +1,19 @@
+# openapi.model.BaseItemPerson
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name_** | **String** |  | [optional] 
+**id** | **String** |  | [optional] 
+**role** | **String** |  | [optional] 
+**type** | [**PersonType**](PersonType.md) |  | [optional] 
+**primaryImageTag** | **String** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
